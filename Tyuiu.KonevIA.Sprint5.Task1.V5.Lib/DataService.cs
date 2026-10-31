@@ -14,9 +14,10 @@ public class DataService : ISprint5Task1V5
             double denominator = 2.0 * x - 0.5;
             double result = denominator == 0 ? 0
                 : Math.Round(5 - 3.0 * x + (1 + Math.Sin(x)) / denominator, 2);
-            lines.Add(result.ToString(CultureInfo.InvariantCulture));
+            lines.Add(result.ToString(CultureInfo.GetCultureInfo("ru-RU")));
         }
         File.WriteAllLines(path, lines);
         return path;
     }
 }
+

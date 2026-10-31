@@ -9,7 +9,8 @@ public class DataService : ISprint5Task0V2
     {
         double result = Math.Round(Math.Exp(x) / x, 3);
         string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
-        File.WriteAllText(path, result.ToString(CultureInfo.InvariantCulture));
+        File.WriteAllText(path, result.ToString(CultureInfo.GetCultureInfo("ru-RU")));
         return path;
     }
 }
+
